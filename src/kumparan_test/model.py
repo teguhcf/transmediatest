@@ -133,7 +133,7 @@ class Model:
 
 
     def updateNews(self,json_data):
-        news_id = json_data['news_id']
+        news_id = json_data['id']
         # title = json_data['title']
         # content = json_data['content']
         # topic_id = json_data['topic_id']
