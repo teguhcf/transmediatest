@@ -6,4 +6,6 @@
 
 Flask==0.12.2
 pymongo==3.6.1
-
+gunicorn==19.7.1
+future==0.16.0
+pipenv==11.10.0
