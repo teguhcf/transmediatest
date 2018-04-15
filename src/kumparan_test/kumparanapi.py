@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+Author : Teguh Chandra Febriawan
+email : teguhchandraf@gmail.com
+"""
+
+
 from __future__ import division, print_function, absolute_import
 
 import argparse
@@ -20,8 +26,6 @@ __copyright__ = "teguhcf"
 __license__ = "mit"
 
 _logger = logging.getLogger(__name__)
-
-
 
 application = Flask(__name__)
 
