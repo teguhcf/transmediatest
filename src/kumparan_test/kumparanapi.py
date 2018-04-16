@@ -76,7 +76,7 @@ def getNews():
         return json.dumps(data)
         # return mongo_to_jsonResponse(machine)
     except Exception as e:
-        return str(e)
+        return jsonify(message="Data not exist")
 
 
 @application.route("/api/v1/news/delete", methods=['DELETE'])
@@ -145,7 +145,7 @@ def getTopic():
         id = request.args.get('id')
         data= model.getTopic(id)
     except Exception as e:
-        return str(e)
+        return jsonify(message="Data not exist")
     return json.dumps(data)
     # return model.mongo_to_jsonResponse(data)
 
