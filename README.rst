@@ -10,10 +10,9 @@ if any question please email teguhchandraf@gmail.com
 Description
 ===========
 
-A longer description of your project goes here...
-
-This project has deployed in heroku
-
+run service with python, then
+open index.html
+or access api with postman
 this is list of API
 No	API	Methode	Keterangan
 1.	http://localhost:5000/api/v1/cluster/getAllAge get data from circle diagram
