@@ -21,6 +21,10 @@
       width: 50%;
       height: 50%;
     }
+
+    .container-table {
+      width: 80%;
+    }
   </style>
 
   <body>
@@ -28,7 +32,10 @@
       <canvas id="myChart"></canvas>
     </div>
 
+
+    <div class="container-table">
     <div id="example-table"></div>
+    </div>
 
     <script>
     var tableData = [];
@@ -40,12 +47,16 @@
       //define table
       var table = new Tabulator("#example-table", {
         data: tableData,
+        layout:"fitColumns",      //fit columns to width of table
+        pagination:"local",       //paginate the data
+	    paginationSize:7,         //allow 7 rows per page of data
         //autoColumns: true
         columns:[                 //define the table columns
-        {title:"No", field:"no", editor:"input"},
+        {title:"No", field:"no", editor:"input",width:95},
+        {title:"Nama", field:"name", editor:"input"},
+        {title:"Tanggal Lahir", field:"birthDate", editor:"input",width:200},
         {title:"Umur", field:"age", width:95, editor:"select", editorParams:{"Male":"male", "Female":"female"}},
-		{title:"Tanggal Lahir", field:"birthDate", editor:"input"},
-		{title:"Nama", field:"name", editor:"input"},
+
 
 		//{title:"Nama", field:"birthDate", align:"left", formatter:"progress", editor:true},
 
