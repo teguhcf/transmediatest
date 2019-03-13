@@ -7,12 +7,6 @@ class DataEmployee:
     print(df)
     df2 = df
     nameEmployee = df['NAMA']
-    print("ini jut name")
-    print(nameEmployee)
-    print("ini df2")
-    print(df2)
-    print("ini loopsj")
-
     listEmployee = []
 
     for index, row in df.iterrows():
@@ -40,11 +34,6 @@ class DataEmployee:
         print(df)
         df2 = df
         nameEmployee = df['NAMA']
-        print("ini jut name")
-        print(nameEmployee)
-        print("ini df2")
-        print(df2)
-        print("ini loopsj")
 
         listEmployee = []
         no=1
@@ -77,11 +66,6 @@ class DataEmployee:
         print(df)
         df2 = df
         nameEmployee = df['NAMA']
-        print("ini jut name")
-        print(nameEmployee)
-        print("ini df2")
-        print(df2)
-        print("ini loopsj")
 
         listEmployee = []
         listEmployeeUnder26=0
@@ -165,11 +149,6 @@ class DataEmployee:
         print(df)
         df2 = df
         nameEmployee = df['NAMA']
-        print("ini jut name")
-        print(nameEmployee)
-        print("ini df2")
-        print(df2)
-        print("ini loopsj")
 
         listEmployee = []
         listEmployeeUnder26 = 0
@@ -227,11 +206,6 @@ class DataEmployee:
         print(df)
         df2 = df
         nameEmployee = df['NAMA']
-        print("ini jut name")
-        print(nameEmployee)
-        print("ini df2")
-        print(df2)
-        print("ini loopsj")
 
         listEmployee = []
         listEmployeeUnder26=0
@@ -240,9 +214,6 @@ class DataEmployee:
         listEmployeeUnder31to35 = 0
         listEmployeeUnder36to40 = 0
         listEmployeeUmpper40 = 0
-
-
-
 
         for index, row in df.iterrows():
             now = datetime.datetime.now()
