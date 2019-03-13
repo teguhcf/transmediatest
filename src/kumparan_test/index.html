@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  </head>
+  <link
+      href="https://unpkg.com/tabulator-tables@4.2.3/dist/css/tabulator.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/tabulator-tables@4.2.3/dist/js/tabulator.min.js"
+    ></script>
+  <style>
+    .container {
+      width: 50%;
+      height: 50%;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <div id="example-table"></div>
+
+    <script>
+    var tableData = [];
+       // Table
+      axios.get("http://localhost:5000/api/v1/employee/get").then(res => {
+        table.setData(res.data);
+      });
+
+      //define table
+      var table = new Tabulator("#example-table", {
+        data: tableData,
+        //autoColumns: true
+        columns:[                 //define the table columns
+        {title:"No", field:"no", editor:"input"},
+        {title:"Umur", field:"age", width:95, editor:"select", editorParams:{"Male":"male", "Female":"female"}},
+		{title:"Tanggal Lahir", field:"birthDate", editor:"input"},
+		{title:"Nama", field:"name", editor:"input"},
+
+		//{title:"Nama", field:"birthDate", align:"left", formatter:"progress", editor:true},
+
+	]
+      });
+
+      // Call api
+      axios.get("http://localhost:5000/api/v1/cluster/getAge").then(res => {
+        res.data.age.map(value => {
+          myChart.data.labels.push(value);
+        });
+        res.data.amount.map(value => {
+          myChart.data.datasets[0].data.push(value);
+        });
+        myChart.update();
+      });
+
+      // Chart
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: "pie",
+
+        // The data for our dataset
+        data: {
+          labels: [],
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: [
+                "rgb(29, 104, 132)",
+                "rgb(208, 224, 29)",
+                "rgb(224, 29, 29)",
+                "rgba(75, 192, 192, 0.9)",
+                "rgba(153, 102, 255, 0.9)",
+                "rgba(255, 159, 64, 0.9)"
+              ],
+              borderColor: "rgb(255, 2555, 255)",
+              data: []
+            }
+          ]
+        },
+
+        // Configuration options go here
+        options: {}
+      });
+    </script>
+  </body>
+</html>
