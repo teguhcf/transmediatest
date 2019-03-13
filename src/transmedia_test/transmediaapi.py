@@ -43,17 +43,8 @@ def getClusterAge():
     try:
 
         dataEmployee = DataEmployee()
-
-        dataName = dataEmployee.getEmployee()
-
-        #
-        # for index in dataName:
-        #     print(index)
-
         print("ini class employee cluster age")
         clusterAge = dataEmployee.getEmployeeClusteringAge()
-        # print(clusterAge)
-
         return jsonify(clusterAge)
 
     except Exception as e:
@@ -65,17 +56,9 @@ def getClusterAgeAll():
     try:
 
         dataEmployee = DataEmployee()
-
-        # dataName = dataEmployee.getEmployee()
-
-        #
-        # for index in dataName:
-        #     print(index)
-
         print("ini class employee cluster age")
         clusterAge = dataEmployee.getEmployeeClusteringAgeAll()
         # print(clusterAge)
-
         return jsonify(clusterAge)
 
     except Exception as e:
@@ -87,17 +70,7 @@ def getEmp():
     try:
 
         dataEmployee = DataEmployee()
-
         dataName = dataEmployee.getEmployee()
-
-        #
-        # for index in dataName:
-        #     print(index)
-
-        print("ini class employee cluster age")
-        # clusterAge = dataEmployee.getEmployeeClusteringAge()
-        # print(clusterAge)
-
         return jsonify(dataName)
 
     except Exception as e:
