@@ -2,7 +2,7 @@ import pandas as pd
 import datetime
 from datetime import date
 class DataEmployee:
-    data = pd.read_excel(r'E:\employee.xlsx')
+    data = pd.read_excel(r'employee.xlsx')
     df = pd.DataFrame(data, columns=['NAMA', 'tgl_lahir'])
     print(df)
     df2 = df

@@ -30,9 +30,9 @@ cors = CORS(application)
 
 
 # mlab database
-connection = MongoClient('ds011495.mlab.com', 11495)
-db = connection['kumparan']
-db.authenticate('teguhcf', '123456')
+# connection = MongoClient('ds011495.mlab.com', 11495)
+# db = connection['kumparan']
+# db.authenticate('teguhcf', '123456')
 
 # for database lokal
 # client = MongoClient('localhost', 27017)
