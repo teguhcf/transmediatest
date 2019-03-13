@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-    Setup file for kumparan_test.
+    Setup file for transmedia_test.
 
     This file was generated with PyScaffold 3.0.2.
     PyScaffold helps you to put up the scaffold of your new Python project.
@@ -14,9 +14,9 @@ from setuptools import setup
 # Add here console scripts and other entry points in ini-style format
 entry_points = """
 [console_scripts]
-# script_name = kumparan_test.module:function
+# script_name = transmedia_test.module:function
 # For example:
-# fibonacci = kumparan_test.skeleton:run
+# fibonacci = transmedia_test.skeleton:run
 """
 
 

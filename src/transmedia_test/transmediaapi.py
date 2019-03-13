@@ -13,10 +13,10 @@ from __future__ import division, print_function, absolute_import
 import logging
 from pymongo import MongoClient,ASCENDING
 from flask import Flask, json, request,jsonify
-from src.kumparan_test.dataEmployee import DataEmployee
+from src.transmedia_test.dataEmployee import DataEmployee
 from flask_cors import CORS
 
-from src.kumparan_test import __version__
+from src.transmedia_test import __version__
 
 __author__ = "teguhcf"
 __copyright__ = "teguhcf"
