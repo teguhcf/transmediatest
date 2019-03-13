@@ -29,7 +29,7 @@ class DataEmployee:
     print("ini hasil")
 
     def getEmployee(self):
-        data = pd.read_excel(r'E:\employee.xlsx')
+        data = pd.read_excel(r'employee.xlsx')
         df = pd.DataFrame(data, columns=['NAMA', 'tgl_lahir'])
         print(df)
         df2 = df
@@ -61,7 +61,7 @@ class DataEmployee:
 
     def getEmployeeClusteringAge(self):
 
-        data = pd.read_excel(r'E:\employee.xlsx')
+        data = pd.read_excel(r'employee.xlsx')
         df = pd.DataFrame(data, columns=['NAMA', 'tgl_lahir'])
         print(df)
         df2 = df
@@ -144,7 +144,7 @@ class DataEmployee:
 
 
     def getEmployeeClusteringAgeAll(self):
-        data = pd.read_excel(r'E:\employee.xlsx')
+        data = pd.read_excel(r'employee.xlsx')
         df = pd.DataFrame(data, columns=['NAMA', 'tgl_lahir'])
         print(df)
         df2 = df
@@ -201,7 +201,7 @@ class DataEmployee:
 
     def getEmployeeClusteringAgePersen(self):
 
-        data = pd.read_excel(r'E:\employee.xlsx')
+        data = pd.read_excel(r'employee.xlsx')
         df = pd.DataFrame(data, columns=['NAMA', 'tgl_lahir'])
         print(df)
         df2 = df
