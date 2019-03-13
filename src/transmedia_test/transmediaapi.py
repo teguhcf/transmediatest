@@ -36,7 +36,7 @@ db.authenticate('teguhcf', '123456')
 
 # for database lokal
 # client = MongoClient('localhost', 27017)
-# db = client.kumparan
+# db = client.transmedia
 
 @application.route("/api/v1/cluster/getAge", methods=['GET'])
 def getClusterAge():
